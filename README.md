@@ -1,5 +1,5 @@
-# My thoughts
-Mostly in the form of beautiful LaTeX generated, Heckle compiled PDFs.
+# Study Notes
+Category Theory, Pi Calculus, whatever else
 
 # Start your own Heckle blog with this theme
 
