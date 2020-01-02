@@ -1,0 +1,66 @@
+\documentclass[11pt]{article}
+
+\date{January 1, 2020}
+\title{Pullback of B -> P(A) is unique}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz-cd}
+\usepackage{multicol}
+\begin{document}
+\begin{multicols}{2}
+\begin{tikzcd}
+  R \arrow[r, hookrightarrow, "r"] \arrow[d, "g"]
+  & B \times A \arrow[d, "f_{R} \times id_{A}"] \\
+  \varepsilon_{A} \arrow[r, hookrightarrow, "P"] 
+    \arrow[d, leftrightarrow, "x"]
+  & P(A) \times A 
+    \arrow[d, leftrightarrow, "y"] \\
+  \varepsilon_{A}' 
+    \arrow[r, hookrightarrow, dashed, "\wedge"]
+    \arrow[d, dashed, "1^{\varepsilon_{A}'}"]
+  & 2^{A} \times A \arrow[d, dashed, "ev"] \\
+  1 \arrow[r, dashed, "T"]
+  & 2
+\end{tikzcd}
+
+\columnbreak
+
+\begin{equation*}
+\begin{aligned}
+& f \in B \rightarrow P(A) \\
+& R \subseteq B \times A \\
+& f_{R} \in B \rightarrow P(A) \mid f_{R}(x) = 
+  \{y \mid y \in A \land \langle x, y \rangle \in R\} \\
+& \varepsilon_{A} \subseteq P(A) \times A = 
+  \{ \langle U, y \rangle \mid U \subseteq A \land x \in U \} \\
+& \varepsilon_{A}' \subseteq 2^{A} \times A =
+  \{ \langle X_{U}, x \rangle \mid 
+      U \subseteq A \land x \in A \land X_{U}(x) = 1 \} \\
+& \varepsilon_{A} \cong \varepsilon_{A}'
+\end{aligned}
+\end{equation*}
+
+\end{multicols}
+
+\begin{equation*}
+\begin{aligned}
+& f_{R} \times id_{A} \circ r = p \circ g \land \\
+& y \circ P = \wedge \circ x \land \\
+& ev \circ \wedge = T \circ 1^{\varepsilon_{A}'} \implies \\
+& ev \circ y \circ f_{R} \times id_{A} \circ f =
+  T \circ 1^{\varepsilon_{A}'} \circ x \circ g \implies \\
+& ev \circ y \circ f_{R} \times id_{A} 
+  \text{ characterizes R as subobject of } B \times A \implies \\
+& ev \circ y \circ f_{R} \times id_{A} \text{ unique};
+& \\
+& ev \circ y \circ f_{R} \times id_{A} \text{ unique } \land
+  id_{A} \text{ unique } \implies \\
+& f_{R} \text{ unique}
+\end{aligned}
+\end{equation*}
+
+\hrulefill
+
+$$ \text{Pullback of } B \rightarrow P(A) \text{ is unique }\blacksquare $$
+
+\end{document}
