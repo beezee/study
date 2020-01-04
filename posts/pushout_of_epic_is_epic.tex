@@ -1,0 +1,61 @@
+\documentclass[11pt]{article}
+
+\date{January 4, 2020}
+\title{Pushout of epic is epic}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz-cd}
+\usepackage{mathtools}
+\usepackage{multicol}
+\begin{document}
+\begin{multicols}{2}
+\begin{tikzcd}
+  A \arrow[r, two heads, "f"] \arrow[d, "g"]
+  & B \arrow[d, "h"] \arrow[ddr, bend left, "yh"] & \\
+  C \arrow[r, "i"] 
+    \arrow[drr, bend right, "yi"]
+  & D \arrow[dr, dashed, "y"] \\
+  & & X
+\end{tikzcd}
+
+\columnbreak
+
+\begin{align*}
+& h \circ f = i \circ g \\
+\forall X \in & Ob(C),
+  \; \forall \langle p, q \rangle \in B \rightarrow X \times C \rightarrow X \\
+& \exists! r \mid r \circ h = p \land r \circ i = q \\
+\forall X \in & Ob(C),
+  \; \forall \langle p, q \rangle \in B \rightarrow X \times C \rightarrow X \\
+& pf_X!(p, q) \coloneqq \text{ unique } r \mid 
+                            r \circ h = p \land r \circ i = q \\
+\forall X \in & Ob(C) \;
+  \forall \{p, q\} \subseteq B \rightarrow X \\
+& p \circ f = q \circ f \implies p = q 
+\end{align*}
+
+\end{multicols}
+
+\begin{equation*}
+\begin{aligned}
+x \in D \rightarrow X &\mid x \circ i = y \circ i \land
+  h \circ f = i \circ g \implies \\
+(x \circ h) \circ f &= x \circ (h \circ f) \\
+                    &= x \circ (i \circ g) \\
+                    &= (x \circ i) \circ g \\
+                    &= (y \circ i) \circ g \\
+                    &= y \circ (i \circ g) \\
+                    &= y \circ (h \circ f) \\
+                    &= (y \circ h) \circ f \implies \\
+x \circ h = y \circ h& \\
+x = pf_X!(x \circ& h, x \circ i) = pf_X!(y \circ h, y \circ i) = y \implies \\
+i \text{ is epic }&
+\end{aligned}
+\end{equation*}
+
+\hrulefill
+
+$$ \text{ pushout of epic is epic } \blacksquare $$
+
+\end{document}
+
