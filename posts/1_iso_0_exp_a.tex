@@ -1,0 +1,62 @@
+\documentclass[fleqn, 11pt]{article}
+
+\date{January 4, 2020}
+\title{1 iso 0 ^ a}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz-cd}
+\usepackage{mathtools}
+\usepackage{multicol}
+\begin{document}
+
+\begin{tikzcd}
+  && a^{0} \times 0 
+    \arrow[ddll, bend right, swap, "1^{a^0}"]
+    \arrow[ddrr, bend left, "eval"]
+    \arrow[d, dashed, xshift = -.7ex, swap, "1^{a^0} \times id_0"] && \\
+  && 1 \times 0 \arrow[u, xshift = .7ex, swap, dashed, 
+                       "\widehat{0^a \circ p_0} \times id_0"]
+    \arrow[d, dashed, "id_1 \times a^{0}"] 
+    \arrow[dll, "p_{1}"] 
+    \arrow[drr, "0^a \circ p_0"] && \\
+  1 && 1 \times a \arrow[ll, "p_{1}"] \arrow[rr, "p_{a}"] && a 
+\end{tikzcd}
+
+\begin{equation}
+\tag{from}
+\begin{aligned}
+& 1^{a^0} \times id_0 \text{ unique } \land \\
+& \widehat{0^a \circ p_0} \times id_0 \text{ unique } \land \\
+& id_0 \text{ unique } \land \\
+& 1^{a^0} \times id_0 \circ \widehat{0^a \circ p_0} \times id_0 =
+  (1^{a^0} \circ \widehat{0^a \circ p_0}) \times id_0 \implies \\
+& (1^{a^0} \circ \widehat{0^a \circ p_0}) \times id_0 \text{ unique }
+  \implies \\
+& 1^{a^0} \circ \widehat{0^a \circ p_0} \text{ unique } \in 1 \rightarrow 1
+  \implies \\
+& 1^{a^0} \circ \widehat{0^a \circ p_0} = id_1
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\tag{to}
+\begin{aligned}
+& 1^{a^0} \times id_0 \text{ unique } \land \\
+& \widehat{0^a \circ p_0} \times id_0 \text{ unique } \land \\
+& id_0 \text{ unique } \land \\
+& \widehat{0^a \circ p_0} \times id_0 \circ 1^{a^0} \times id_0 =
+  (\widehat{0^a \circ p_0} \circ 1^{a^0}) \times id_0 \implies \\
+& (\widehat{0^a \circ p_0} \circ 1^{a^0}) \times id_0 \text{ unique } \implies \\
+& \widehat{0^a \circ p_0} \circ 1^{a^0} \text{ unique } \in 
+  0^{a^0} \rightarrow 0^{a^0} \implies \\
+& \widehat{0^a \circ p_0} \circ 1^{a^0} = id_{a^0}
+\end{aligned}
+\end{equation}
+
+\hrulefill
+
+$$ a^0 \cong 1 \blacksquare $$
+
+\end{document}
+
+
