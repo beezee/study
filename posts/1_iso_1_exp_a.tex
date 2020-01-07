@@ -1,0 +1,62 @@
+\documentclass[fleqn, 11pt]{article}
+
+\date{January 6, 2020}
+\title{1 iso 1 ^ a}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz-cd}
+\usepackage{mathtools}
+\usepackage{multicol}
+\begin{document}
+
+\begin{tikzcd}
+  && 1^a \times a 
+    \arrow[ddll, bend right, swap, "eval"]
+    \arrow[ddrr, bend left, "p_a"]
+    \arrow[dd, dashed, xshift = -.7ex, swap, "1^{1^a} \times id_a"] && \\
+  && && \\
+  1 && 1 \times a \arrow[uu, xshift = .7ex, swap, dashed, 
+                       "\widehat{p_1} \times id_a"]
+    \arrow[ll, "p_{1}"] 
+    \arrow[rr, swap, "p_a"] && a
+\end{tikzcd}
+
+\begin{equation}
+\tag{from}
+\begin{aligned}
+& 1^{1^a} \times id_a \text{ unique } \land \\
+& \widehat{p_1} \times id_a \text{ unique } \land \\
+& id_a \text{ unique } \land \\
+& 1^{1^a} \times id_a \circ \widehat{p_1} \times id_a =
+  (1^{1^a} \circ \widehat{p_1}) \times id_a \implies \\
+& (1^{1^a} \circ \widehat{p_1}) \times id_a \text{ unique }
+  \implies \\
+& 1^{1^a} \circ \widehat{p_1} \text{ unique } \in 1 \rightarrow 1
+  \implies \\
+& 1^{1^a} \circ \widehat{p_1} = id_1
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\tag{to}
+\begin{aligned}
+& 1^{1^a} \times id_a \text{ unique } \land \\
+& \widehat{p_1} \times id_a \text{ unique } \land \\
+& id_a \text{ unique } \land \\
+& \widehat{p_1} \times id_a \circ 1^{1^a} \times id_a =
+  (\widehat{p_1} \circ 1^{1^a}) \times id_a \implies \\
+& (\widehat{p_1} \circ 1^{1^a}) \times id_a \text{ unique } \implies \\
+& \widehat{p_1} \circ 1^{1^a} \text{ unique } \in 
+  1^a \rightarrow 1^a \implies \\
+& \widehat{p_1} \circ 1^{1^a} = id_{1^a}
+\end{aligned}
+\end{equation}
+
+\hrulefill
+
+$$ 1 \cong 1^a \blacksquare $$
+
+\end{document}
+
+
+
