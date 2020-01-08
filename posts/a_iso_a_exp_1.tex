@@ -1,0 +1,57 @@
+\documentclass[fleqn, 11pt]{article}
+
+\date{January 7, 2020}
+\title{a iso a ^ 1}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz-cd}
+\usepackage{mathtools}
+\usepackage{multicol}
+\begin{document}
+
+\begin{multicols}{2}
+
+\begin{tikzcd}
+  && a^1 
+    \arrow[dashed, xshift = -.7ex, swap]{dd}{ \langle id_a^1, 1^{a^1} \rangle }
+    \arrow[ddll, swap, "1_a^1"]
+    \arrow[ddddrr, bend left, "p_1"] && \\
+  && && \\
+  a^1 && a^1 \times 1
+    \arrow[uu, xshift = .7ex, swap, dashed, "p_a^1"]
+    \arrow[ll, "p_a^1"]
+    \arrow[ddll, swap, "eval"]
+    \arrow[ddrr, "p_1"]
+    \arrow[dashed, xshift = -.7ex, swap]{dd}{ \langle eval, p_1 \rangle } && \\
+  && && \\
+  a && a \times 1 \arrow[uu, xshift = .7ex, swap, dashed, 
+                       "\widehat{p_a} \times id_1"]
+    \arrow[ll, "p_a"] 
+    \arrow[rr, swap, "p_1"] 
+    \arrow[dd, dashed, swap, xshift = -.7ex, "p_a"] && 1 \\
+  && && \\
+  && a
+    \arrow[uull, "id_a"]
+    \arrow[uurr, swap, "1^a"]
+    \arrow[dashed, xshift = .7ex, swap]{uu}{\langle id_a, 1^a \rangle} && 
+\end{tikzcd}
+
+\columnbreak
+
+\begin{equation*}
+\begin{aligned}
+& a^1 \cong a^1 \times 1 \cong a \times 1 \cong a
+\end{aligned}
+\end{equation*}
+
+\end{multicols}
+
+\hrulefill
+
+$$ 1 \cong 1^a \blacksquare $$
+
+\end{document}
+
+
+
+
