@@ -1,0 +1,43 @@
+\documentclass[fleqn, 11pt]{article}
+
+\date{January 11, 2020}
+\title{Left Ideals of M = {M, {}} iff M in Ob(Grp)}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\begin{document}
+
+$$ L_M \coloneqq \text{ Left Ideals of } M \;\forall M \in Ob(Monoid) $$
+
+\begin{equation}
+\tag{from}
+\begin{aligned}
+& L_M = \{M, \emptyset\} \land 
+  (e \in X \implies X = M \; \forall X \in L_M) \implies \\
+& \{X \in L_M \mid e \notin X\} = \{\emptyset\} \implies \\
+& \forall x \in M, \exists y \in M | x \times y = e \implies \\
+& M \in Ob(Grp)
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\tag{to}
+\begin{aligned}
+& M \in Ob(Grp) \implies \\
+& \forall x \in M, \exists y \in M | x \times y = e \implies \\
+& \forall X \in L_M \setminus \emptyset, e \in X \implies \\
+& \forall X \in L_M \setminus \emptyset, X = M \implies \\
+& L_M = \{M, \emptyset\}
+\end{aligned}
+\end{equation}
+
+\hrulefill
+
+$$ L_M = \{M, \emptyset\} \cong M \in Ob(Grp) $$
+
+\end{document}
+
+
+
+
+
