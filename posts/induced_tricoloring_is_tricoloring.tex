@@ -1,0 +1,48 @@
+\documentclass[fleqn, 11pt]{article}
+
+\date{January 11, 2020}
+\title{Induced tricoloring is a tricoloring}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{tikz-cd}
+
+\begin{document}
+\begin{tikzcd}
+  & Red \arrow[ddl, xshift = .7ex] \arrow[ddr, xshift = .7ex] & \\
+  TC \coloneqq && \\
+  White \arrow[uur, xshift = -.7ex] \arrow[rr, yshift = -.7ex] &&
+  Green \arrow[uul, xshift = -.7ex] \arrow[ll, yshift = .7ex]
+\end{tikzcd}
+
+\begin{equation*}
+\begin{aligned}
+& \forall G \in Ob(Graph), \text{ Tricolorings of } G = G \rightarrow TC \\
+& \forall A, G \in Ob(Graph), x \in A \rightarrow G \\
+& \qquad \text{ Tricolorings induced by } x = tc \circ x \; 
+    \forall tc \in G \rightarrow TC \\
+& \forall A \in Ob(Graph), x \in A \rightarrow G, 
+  y \in \text{ Tricolorings induced by } x, \\
+& \qquad \exists tc \in G \rightarrow TC \mid tc \circ x = y \\
+& \qquad tc \circ x \in A \rightarrow TC \implies \\
+& \qquad y \in A \rightarrow TC \implies \\
+& \qquad y \in \text{ Tricolorings of } A \implies \\
+& \qquad (y \in \text{ Tricolorings induced by } x \implies
+  y \in \text{ Tricolorings of } A) \implies \\
+& \qquad \text{ Tricolorings induced by } x \subseteq
+  \text{ Tricolorings of } A \\
+& \qquad \qquad \forall A, G \in Ob(Graph), x \in A \rightarrow G
+\end{aligned}
+\end{equation*}
+
+\hrulefill
+
+$$ \text{ Induced tricoloring is a tricoloring } $$
+
+\end{document}
+
+
+
+
+
+
