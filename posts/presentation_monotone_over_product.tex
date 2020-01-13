@@ -1,0 +1,40 @@
+\documentclass[fleqn, 11pt]{article}
+
+\date{January 13, 2020}
+\title{Product of presentations of endomaps is presentation of product of endomaps}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{tikz-cd}
+
+\begin{document}
+\begin{tikzcd}
+  P(\alpha)
+    \arrow{r}{ \times_p P(\beta) }
+    \arrow[xshift = -.7ex, swap]{dd}{ {p_\alpha}^{-1} }
+  & P(\alpha \times \beta)
+    \arrow[xshift = -.7ex, swap]{dd}{ {p_\beta}^{-1} } \\
+  && \\
+  \alpha
+    \arrow{r}{ \times \beta }
+    \arrow[xshift = .7ex, swap]{uu}{ p_\alpha }
+    \arrow{r}{ \times \beta }
+  & \beta
+    \arrow[xshift = .7ex, swap]{uu}{ p_\beta }
+\end{tikzcd}
+
+\begin{equation*}
+\begin{aligned}
+& p_\beta \circ \times \beta = \\
+& \qquad p_\beta \circ \times \beta \circ {p_\alpha}^{-1} \circ p_\alpha = \\
+& \qquad \times_p P(\beta) \circ p_\alpha \land \\
+& p_\alpha \text{ epic } \implies \\
+& p_\beta \circ \times \beta \circ {p_\alpha}^{-1} = \times_p P(\beta)
+\end{aligned}
+\end{equation*}
+
+\hrulefill
+
+$$ \text{ Product of presentation of endomaps is presentation of product of endomaps } $$
+
+\end{document}
