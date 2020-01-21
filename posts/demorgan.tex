@@ -1,0 +1,56 @@
+\documentclass[fleqn, 11pt]{article}
+
+\date{January 13, 2020}
+\pagestyle{empty}
+\title{DeMorgan's Laws}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+\begin{document}
+
+$$ \forall n \in \mathbb{N+}; \; B - \cap (A_1 .. A_n) = \cup((B - A_1) .. (B - A_n)) $$
+\begin{equation*}
+\begin{aligned}
+& \\
+& n = 1 \Rightarrow B - (A_1 \cap A_1) = B - A_1 = (B - A_1) \cup (B - A_1) \\
+& \\
+& n = 2 \Rightarrow B - (A_1 \cap A_2) =  \\
+& \qquad \{x \mid x \in B \land x \in \{y \mid y \in A_1 \land y \in A_2 \}\} = \\
+& \qquad \{x \mid x \in B \land (x \notin A_1 \lor x \notin A_2)\} = \\
+& \qquad (B - A_1) \cup (B - A_2) \\
+& \\
+& n = k + 1 \Rightarrow B - \cap(A_1 .. A_{k+1}) = & (assoc \; \cap) \\
+& \qquad B - (\cap(A_1 .. A_k) \cap A_{k+1}) = & (n = 2) \\
+& \qquad (B - \cap(A_1 ..A_k)) \cup (B - A_{k+1}) = & (ind. \; hyp.) \\
+& \qquad \cup((B - A_1) .. (B - A_k)) \cup (B - A_{k+1}) = & (assoc \; \cup) \\
+& \qquad \cup((B - A_1) .. (B - A_{k+1})) \\
+& \blacksquare
+\end{aligned}
+\end{equation*}
+
+$$ \forall n \in \mathbb{N+}; \; B - \cup (A_1 .. A_n) = \cap((B - A_1) .. (B - A_n)) $$
+\begin{equation*}
+\begin{aligned}
+& \\
+& n = 1 \Rightarrow B - (A_1 \cup A_1) = B - A_1 = (B - A_1) \cap (B - A_1) \\
+& \\
+& n = 2 \Rightarrow B - (A_1 \cup A_2) =  \\
+& \qquad \{x \mid x \in B \land x \notin A_1 \land x \notin A_2 \} = \\
+& \qquad \{x \mid x \in B \land x \notin A_1 \land 
+           x \in B \land x \notin A_2 \} = \\
+& \qquad \{x \mid (x \in B \land x \notin A_1) \land 
+           (x \in B \land x \notin A_2) \} = \\
+& \qquad (B - A_1) \cap (B - A_2) \\
+& \\
+& n = k + 1 \Rightarrow B - \cup(A_1 .. A_{k+1}) = & (assoc \; \cup) \\
+& \qquad B - (\cup(A_1 .. A_k) \cup A_{k+1}) = & (n = 2) \\
+& \qquad (B - \cup(A_1 ..A_k)) \cap (B - A_{k+1}) = & (ind. \; hyp.) \\
+& \qquad \cap((B - A_1) .. (B - A_k)) \cap (B - A_{k+1}) = & (assoc \; \cap) \\
+& \qquad \cap((B - A_1) .. (B - A_{k+1})) \\
+& \blacksquare
+\end{aligned}
+\end{equation*}
+
+\end{document}
+
