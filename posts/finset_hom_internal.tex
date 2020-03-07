@@ -1,0 +1,54 @@
+\documentclass[fleqn, 11pt]{article}
+
+\date{March 5, 2020}
+\title{FinSet has internal Hom}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{tikz-cd}
+
+\begin{document}
+\begin{equation*}
+\begin{aligned}
+& A \in Ob(FinSet) \implies A \Leftrightarrow \{1..n\}
+    \;\text{for some}\; n \in \mathbb{Z}^{+} \\
+& \text{ let } g \in (A \Rightarrow \{1..n\})
+  \text{ bijective } \\
+& \text{ let } f \in (Hom(A, B) \Rightarrow B^n)
+  \mid f(x)(i) = x(g^{-1}(i)) \;
+  \forall i \in \{1..n\} \\
+& \\
+& \text{ then } \\
+& \\
+& x, y \in Hom(A, B) \mid x \neq y \implies \\
+& \exists a \in A \mid x(a) \neq y(a) \land
+  g^{-1} \text{ surjective } \implies \\
+& \exists i \in \{1..n\} \mid a = g^{-1}(i)
+  \implies \\
+& x(g^{-1}(i)) \neq y(g^{-1}(i)) \implies \\
+& f(x)(i) \neq f(y)(i) \implies \\
+& f(x) \neq f(y) \text{ so } f \text{ injective } \\
+& \\
+& \text{ and } \\
+& \\
+& \forall t \in B^n \\
+& \text{ let } h \in Hom(A, B) \mid h(a) = t(g(a)) \;
+  \forall a \in A \\
+& \text{ then } f(h) = t \text{ since } \\
+& f(h)(i) = h(g^{-1}(i)) = t(g(g^{-1}(i))) = t(i) \;
+  \forall i \in \{1..n\} \text{ so }
+  f \text{ surjective } \\
+& \\
+& B^n \text{ finite since } FinSet
+  \text{ is cartesian closed, } \\
+& Hom(A, B) \Leftrightarrow B^n \implies
+  Hom(A, B) \text{ finite } \\
+& \blacksquare \\
+\end{aligned}
+\end{equation*}
+
+\hrulefill
+
+$$ FinSet \text{ has internal Hom } $$
+
+\end{document}

@@ -229,3 +229,4 @@ cabal.config
 _minted*
 
 word_format/
+posts/*cache.yaml
