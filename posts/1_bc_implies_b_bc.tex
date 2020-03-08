@@ -1,0 +1,55 @@
+\documentclass[fleqn, 11pt]{article}
+
+\date{March 7, 2020}
+\title{1 = B*C -> B = B*C}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz-cd}
+\usepackage{mathtools}
+\usepackage{multicol}
+\begin{document}
+
+\begin{tikzcd}
+  & T
+    \arrow[dashed]{d}{ T^1 }
+    \arrow[ddl, bend right, swap, dashed, "t_1"]
+    \arrow[ddr, bend left, "t_2"]
+  & \\
+  & 1
+    \arrow[ld, "p_1"]
+    \arrow[rd, "p_2"]
+  & \\
+  B & & C \\
+\end{tikzcd}
+
+\begin{equation*}
+\begin{aligned}
+& \forall T \in Ob(C) \; \exists! \; 1^T \in
+  T \rightarrow 1 \\
+& \text{ let } (t_1, t_2) \in
+  (T \rightarrow  B \times T \rightarrow C)
+  \coloneqq (p1 \circ T^1, p2 \circ T^1)
+  \text{ then } \\
+& \forall (t_1', t_2') \in
+  (T \rightarrow  B \times T \rightarrow C) \\
+& \exists! x \in (T \rightarrow 1) \mid
+  t_1' = p_1 \circ x \land t_2' = p_2 \circ x \\
+& \text{ but } \\
+& (T \rightarrow 1) = \{T^1\} \;
+  \text{ so }
+  (t_1', t_2') = (p_1 \circ T^1, p_2 \circ T^1) \\
+& \qquad \forall (t_1', t_2') \in
+  (T \rightarrow B \times T \rightarrow C); \\
+& (T \rightarrow B) = \{p_1 \circ T^1\} \;
+  \forall T \in Ob(C) \implies \\
+& B \text{ terminal } \implies \\
+& B \simeq 1 \implies \\
+& 1 = B \times C = B \; \blacksquare \\
+\end{aligned}
+\end{equation*}
+
+\hrulefill
+
+$$ 1 = B \times C \implies B = B \times C \ $$
+
+\end{document}
